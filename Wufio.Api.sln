@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wufio.Api", "Wufio.Api\Wufio.Api.csproj", "{7F3A66CE-CD07-4903-A8F3-396A3D010E6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wufio.Core", "Wufio.Core\Wufio.Core.csproj", "{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F3A66CE-CD07-4903-A8F3-396A3D010E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3A66CE-CD07-4903-A8F3-396A3D010E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3A66CE-CD07-4903-A8F3-396A3D010E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3A66CE-CD07-4903-A8F3-396A3D010E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
