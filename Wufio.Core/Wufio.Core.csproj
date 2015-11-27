@@ -108,9 +108,14 @@
     <Compile Include="Domain\WufioUser.cs" />
     <Compile Include="Infastructure\AuthContext.cs" />
     <Compile Include="Infastructure\AuthRepository.cs" />
+    <Compile Include="Models\AnimalModel.cs" />
+    <Compile Include="Models\AnimalType.cs" />
     <Compile Include="Models\RegisterAppUserModel.cs" />
     <Compile Include="Models\RegisterRescuePrimaryModel.cs" />
     <Compile Include="Models\RegisterVolunteerModel.cs" />
+    <Compile Include="Models\RescueModel.cs" />
+    <Compile Include="Models\UserAnimalModel.cs" />
+    <Compile Include="Models\WufioUserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
