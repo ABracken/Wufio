@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wufio.Core.Models;
 
 namespace Wufio.Core.Domain
 {
@@ -26,5 +27,10 @@ namespace Wufio.Core.Domain
         public string ImageUrl { get; set; }
 
         public virtual ICollection<WufioUser> Volunteers { get; set; }
+
+        public void Update(RescueModel rescue)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

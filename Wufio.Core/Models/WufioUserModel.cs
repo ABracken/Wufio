@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wufio.Core.Models
 {
-    class WufioUserModel
+    public class WufioUserModel
     {
         public int RescueId { get; set; }
         public string FirstName { get; set; }
