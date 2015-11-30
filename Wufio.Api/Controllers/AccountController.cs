@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Wufio.Core.Domain;
 using Wufio.Core.Models;
 
 namespace Wufio.Core.Controllers
@@ -15,19 +16,65 @@ namespace Wufio.Core.Controllers
     {
         private AuthContext _ctx;
 
-        private UserManager<IdentityUser> _userManager;
+        private UserManager<WufioUser> _userManager;
 
         public AuthRepository()
         {
             _ctx = new AuthContext();
-            _userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(_ctx));
+            _userManager = new UserManager<WufioUser>(new UserStore<WufioUser>(_ctx));
         }
 
-        public async Task<IdentityResult> RegisterUser(RegisterAppUserModel userModel)
+        public async Task<IdentityResult> RegisterAppUser(RegisterAppUserModel userModel)
         {
-            IdentityUser user = new IdentityUser
+            WufioUser user = new WufioUser
             {
-                UserName = userModel.UserName
+                UserName = userModel.UserName,
+                Email = userModel.Email,
+                ImageUrl = userModel.ImageUrl,
+            };
+
+            var result = await _userManager.CreateAsync(user, userModel.Password);
+
+            return result;
+        }
+
+        public async Task<IdentityResult> RegisterRescuePrimaryUser(RegisterRescuePrimaryModel userModel)
+        {
+            Rescue rescue = new Rescue
+            {
+                RescueName = userModel.RescueName,
+                NonProfitLink = userModel.NonProfitLink,
+                Email = userModel.Email,
+                Address1 = userModel.Address1,
+                Address2 = userModel.Address2,
+                City = userModel.City,
+                State = userModel.State,
+                Zipcode = userModel.Zipcode,
+                ImageUrl = userModel.ImageUrl
+
+            };
+
+            WufioUser user = new WufioUser
+            {                
+                UserName = userModel.UserName,
+                Email = userModel.Email,
+                FirstName = userModel.FirstName,
+                LastName = userModel.LastName,
+                ImageUrl = userModel.ImageUrl
+            };
+
+            var result = await _userManager.CreateAsync(user, userModel.Password);
+
+            return result;
+        }
+
+        public async Task<IdentityResult> RegisterVolunteerUser(RegisterVolunteerModel userModel)
+        {
+            WufioUser user = new WufioUser
+            {
+                UserName = userModel.UserName,
+                Email = userModel.Email,
+                ImageUrl = userModel.ImageUrl,
             };
 
             var result = await _userManager.CreateAsync(user, userModel.Password);
