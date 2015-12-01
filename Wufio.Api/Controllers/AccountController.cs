@@ -20,27 +20,71 @@ namespace Wufio.Api.Controllers
             _repo = new AuthRepository();
         }
 
-        //// POST api/Account/Register
-        //[AllowAnonymous]
-        //[Route("Register")]
-        //public async Task<IHttpActionResult> Register(WufioUserModel userModel)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
+        // POST api/Account/RegisterAppUser
+        [AllowAnonymous]
+        [Route("RegisterAppUser")]
+        public async Task<IHttpActionResult> RegisterAppUser(RegisterAppUserModel userModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-        //    IdentityResult result = await _repo.RegisterAppUser(userModel);
+            IdentityResult result = await _repo.RegisterAppUser(userModel);
 
-        //    IHttpActionResult errorResult = GetErrorResult(result);
+            IHttpActionResult errorResult = GetErrorResult(result);
 
-        //    if (errorResult != null)
-        //    {
-        //        return errorResult;
-        //    }
+            if (errorResult != null)
+            {
+                return errorResult;
+            }
 
-        //    return Ok();
-        //}
+            return Ok();
+        }
+
+        // POST api/Account/RegisterRescuePrimaryUser
+        [AllowAnonymous]
+        [Route("RegisterRescuePrimaryUser")]
+        public async Task<IHttpActionResult> RegisterRescuePrimaryUser(RegisterRescuePrimaryModel userModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            IdentityResult result = await _repo.RegisterRescuePrimaryUser(userModel);
+
+            IHttpActionResult errorResult = GetErrorResult(result);
+
+            if (errorResult != null)
+            {
+                return errorResult;
+            }
+
+            return Ok();
+        }
+
+        // POST api/Account/RegisterVolunteerUser
+        [AllowAnonymous]
+        [Route("RegisterVolunteerUser")]
+        public async Task<IHttpActionResult> RegisterVolunteerUser(RegisterVolunteerModel userModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            IdentityResult result = await _repo.RegisterVolunteerUser(userModel);
+
+            IHttpActionResult errorResult = GetErrorResult(result);
+
+            if (errorResult != null)
+            {
+                return errorResult;
+            }
+
+            return Ok();
+        }
 
         protected override void Dispose(bool disposing)
         {
