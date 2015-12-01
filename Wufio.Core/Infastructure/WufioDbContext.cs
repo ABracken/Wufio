@@ -11,6 +11,10 @@ namespace Wufio.Core.Infastructure
 {
     public class WufioDbContext : IdentityDbContext<WufioUser>
     {
+        public WufioDbContext() : base("Wufio")
+        {
+                
+        }
         public IDbSet<Animal> Animals { get; set; }
         public IDbSet<AnimalType> AnimalTypes { get; set; }
         public IDbSet<Rescue> Rescues { get; set; }
@@ -21,7 +25,8 @@ namespace Wufio.Core.Infastructure
             modelBuilder.Entity<Animal>().HasKey(a => a.AnimalId);
             modelBuilder.Entity<Animal>().HasMany(a => a.UserLikes)
                                          .WithRequired(ua => ua.Animal)
-                                         .HasForeignKey(ua => ua.AnimalId);   
+                                         .HasForeignKey(ua => ua.AnimalId)
+                                         .WillCascadeOnDelete(false);   
 
             modelBuilder.Entity<AnimalType>().HasKey(at => at.AnimalTypeId);
             modelBuilder.Entity<AnimalType>().HasMany(at => at.Animals)
@@ -37,7 +42,9 @@ namespace Wufio.Core.Infastructure
 
             modelBuilder.Entity<WufioUser>().HasMany(wu => wu.LikedAnimals)
                                             .WithRequired(ua => ua.WufioUser)
-                                            .HasForeignKey(ua => ua.WufioUserId);
+                                            .HasForeignKey(ua => ua.WufioUserId)
+                                            .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<WufioUser>().HasMany(wu => wu.AddedAnimals)
                                             .WithRequired(a => a.Volunteer)
                                             .HasForeignKey(a => a.WufioUserId);

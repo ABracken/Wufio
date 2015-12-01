@@ -8,7 +8,6 @@ namespace Wufio.Core.Models
 {
     public class UserAnimalModel
     {
-        public int UserAnimalId { get; set; }
         public int AnimalId { get; set; }
         public int AnimalTypeId { get; set; }
         public string WufioUserId { get; set; }

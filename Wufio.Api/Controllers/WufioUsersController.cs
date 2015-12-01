@@ -11,25 +11,26 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Wufio.Core;
 using Wufio.Core.Domain;
+using Wufio.Core.Infastructure;
 using Wufio.Core.Models;
 
 namespace Wufio.Api.Controllers
 {
     public class WufioUsersController : ApiController
     {
-        private AuthContext db = new AuthContext();
+        private WufioDbContext db = new WufioDbContext();
 
         // GET: api/WufioUsers
         public IEnumerable<WufioUserModel> GetIdentityUsers()
         {
-            return Mapper.Map<IEnumerable<WufioUserModel>>(db.IdentityUsers);
+            return Mapper.Map<IEnumerable<WufioUserModel>>(db.Users);
         }
 
         // GET: api/WufioUsers/5
         [ResponseType(typeof(WufioUserModel))]
         public IHttpActionResult GetWufioUser(string id)
         {
-            WufioUser dbWufioUser = db.IdentityUsers.Find(id);
+            WufioUser dbWufioUser = db.Users.Find(id);
             if (dbWufioUser == null)
             {
                 return NotFound();
@@ -75,47 +76,47 @@ namespace Wufio.Api.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/WufioUsers
-        [ResponseType(typeof(WufioUserModel))]
-        public IHttpActionResult PostWufioUser(WufioUserModel wufioUser)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //// POST: api/WufioUsers
+        //[ResponseType(typeof(WufioUserModel))]
+        //public IHttpActionResult PostWufioUser(WufioUserModel wufioUser)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            db.IdentityUsers.Add(wufioUser);
+        //    db.Users.Add(wufioUser);
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (WufioUserExists(wufioUser.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        db.SaveChanges();
+        //    }
+        //    catch (DbUpdateException)
+        //    {
+        //        if (WufioUserExists(wufioUser.Id))
+        //        {
+        //            return Conflict();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return CreatedAtRoute("DefaultApi", new { id = wufioUser.Id }, wufioUser);
-        }
+        //    return CreatedAtRoute("DefaultApi", new { id = wufioUser.Id }, wufioUser);
+       // }
 
         // DELETE: api/WufioUsers/5
         [ResponseType(typeof(WufioUserModel))]
         public IHttpActionResult DeleteWufioUser(string id)
         {
-            WufioUser wufioUser = db.IdentityUsers.Find(id);
+            WufioUser wufioUser = db.Users.Find(id);
             if (wufioUser == null)
             {
                 return NotFound();
             }
 
-            db.IdentityUsers.Remove(wufioUser);
+            db.Users.Remove(wufioUser);
             db.SaveChanges();
 
             return Ok(wufioUser);
@@ -132,7 +133,7 @@ namespace Wufio.Api.Controllers
 
         private bool WufioUserExists(string id)
         {
-            return db.IdentityUsers.Count(e => e.Id == id) > 0;
+            return db.Users.Count(e => e.Id == id) > 0;
         }
     }
 }

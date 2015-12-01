@@ -1,7 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
+using System.Web.Http;
+using Wufio.Core;
+using Wufio.Core.Models;
 
 namespace Wufio.Api.Controllers
 {
@@ -15,27 +20,27 @@ namespace Wufio.Api.Controllers
             _repo = new AuthRepository();
         }
 
-        // POST api/Account/Register
-        [AllowAnonymous]
-        [Route("Register")]
-        public async Task<IHttpActionResult> Register(WufioUserModel userModel)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //// POST api/Account/Register
+        //[AllowAnonymous]
+        //[Route("Register")]
+        //public async Task<IHttpActionResult> Register(WufioUserModel userModel)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            IdentityResult result = await _repo.RegisterAppUser(userModel);
+        //    IdentityResult result = await _repo.RegisterAppUser(userModel);
 
-            IHttpActionResult errorResult = GetErrorResult(result);
+        //    IHttpActionResult errorResult = GetErrorResult(result);
 
-            if (errorResult != null)
-            {
-                return errorResult;
-            }
+        //    if (errorResult != null)
+        //    {
+        //        return errorResult;
+        //    }
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
         protected override void Dispose(bool disposing)
         {

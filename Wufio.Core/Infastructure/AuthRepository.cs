@@ -6,19 +6,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using Wufio.Core.Domain;
+using Wufio.Core.Infastructure;
 using Wufio.Core.Models;
 
 namespace Wufio.Core
 {
     public class AuthRepository : IDisposable
     {
-        private AuthContext _ctx;
+        private WufioDbContext _ctx;
 
         private UserManager<WufioUser> _userManager;
 
         public AuthRepository()
         {
-            _ctx = new AuthContext();
+            _ctx = new WufioDbContext();
             _userManager = new UserManager<WufioUser>(new UserStore<WufioUser>(_ctx));
         }
 

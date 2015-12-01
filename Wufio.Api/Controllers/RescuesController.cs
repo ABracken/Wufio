@@ -12,13 +12,14 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Wufio.Core;
 using Wufio.Core.Domain;
+using Wufio.Core.Infastructure;
 using Wufio.Core.Models;
 
 namespace Wufio.Api.Controllers
 {
     public class RescuesController : ApiController
     {
-        private AuthContext db = new AuthContext();
+        private WufioDbContext db = new WufioDbContext();
 
         // GET: api/Rescues
         public IEnumerable<RescueModel> GetRescues()
