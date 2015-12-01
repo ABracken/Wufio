@@ -14,6 +14,9 @@ namespace Wufio.Core.Domain
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string ImageUrl { get; set; }
+        
+        public virtual ICollection<Animal> AddedAnimals { get; set; }
+        public virtual ICollection<UserAnimal> LikedAnimals { get; set; }
 
         public virtual Rescue Rescue { get; set; }
     }

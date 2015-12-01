@@ -13,6 +13,8 @@ namespace Wufio.Core.Domain
         public string Description { get; set; }
         public string ImageUrl { get; set; }
 
+        public virtual ICollection<Animal> Animals { get; set; }
+
         public void Update(AnimalTypeModel animalType)
         {
             AnimalTypeId = animalType.AnimalTypeId;

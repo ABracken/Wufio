@@ -106,7 +106,6 @@
     <Compile Include="Domain\Rescue.cs" />
     <Compile Include="Domain\UserAnimal.cs" />
     <Compile Include="Domain\WufioUser.cs" />
-    <Compile Include="Infastructure\AuthContext.cs" />
     <Compile Include="Infastructure\AuthRepository.cs" />
     <Compile Include="Infastructure\WufioDbContext.cs" />
     <Compile Include="Models\AnimalModel.cs" />

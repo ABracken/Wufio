@@ -20,6 +20,7 @@ namespace Wufio.Core.Domain
 
         public virtual AnimalType AnimalType { get; set; }
         public virtual WufioUser Volunteer { get; set; }
+        public virtual ICollection<UserAnimal> UserLikes { get; set; }
 
         public void Update(AnimalModel animal)
         {
