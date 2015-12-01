@@ -13,5 +13,15 @@ public class AuthContext : IdentityDbContext<IdentityUser>
         {
 
         }
+
+        public System.Data.Entity.DbSet<Wufio.Core.Domain.Animal> Animals { get; set; }
+
+        public System.Data.Entity.DbSet<Wufio.Core.Domain.AnimalType> AnimalTypes { get; set; }
+
+        public System.Data.Entity.DbSet<Wufio.Core.Domain.WufioUser> IdentityUsers { get; set; }
+
+        public System.Data.Entity.DbSet<Wufio.Core.Domain.Rescue> Rescues { get; set; }
+
+        public System.Data.Entity.DbSet<Wufio.Core.Domain.UserAnimal> UserAnimals { get; set; }
     }
 }
