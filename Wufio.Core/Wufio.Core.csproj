@@ -108,9 +108,9 @@
     <Compile Include="Domain\WufioUser.cs" />
     <Compile Include="Infastructure\AuthRepository.cs" />
     <Compile Include="Infastructure\WufioDbContext.cs" />
-    <Compile Include="Migrations\201512012259289_InitialCreate.cs" />
-    <Compile Include="Migrations\201512012259289_InitialCreate.Designer.cs">
-      <DependentUpon>201512012259289_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201512022229149_InitialCreate.cs" />
+    <Compile Include="Migrations\201512022229149_InitialCreate.Designer.cs">
+      <DependentUpon>201512022229149_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnimalModel.cs" />
@@ -128,8 +128,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512012259289_InitialCreate.resx">
-      <DependentUpon>201512012259289_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512022229149_InitialCreate.resx">
+      <DependentUpon>201512022229149_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

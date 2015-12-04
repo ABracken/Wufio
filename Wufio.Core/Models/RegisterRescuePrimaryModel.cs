@@ -34,7 +34,6 @@ namespace Wufio.Core
         [Display(Name = "Zipcode")]
         public string Zipcode { get; set; }
 
-        [Required]
         [Display(Name = "Rescue Profile Picture")]
         public string RescueImageUrl { get; set; }
 
@@ -54,7 +53,6 @@ namespace Wufio.Core
         [Display(Name = "Last name")]
         public string LastName { get; set; }
 
-        [Required]
         [Display(Name = "Profile Picture")]
         public string ImageUrl { get; set; }
 

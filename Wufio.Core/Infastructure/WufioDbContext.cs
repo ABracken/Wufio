@@ -13,7 +13,7 @@ namespace Wufio.Core.Infastructure
     {
         public WufioDbContext() : base("Wufio")
         {
-                
+
         }
         public IDbSet<Animal> Animals { get; set; }
         public IDbSet<AnimalType> AnimalTypes { get; set; }
@@ -26,7 +26,7 @@ namespace Wufio.Core.Infastructure
             modelBuilder.Entity<Animal>().HasMany(a => a.UserLikes)
                                          .WithRequired(ua => ua.Animal)
                                          .HasForeignKey(ua => ua.AnimalId)
-                                         .WillCascadeOnDelete(false);   
+                                         .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<AnimalType>().HasKey(at => at.AnimalTypeId);
             modelBuilder.Entity<AnimalType>().HasMany(at => at.Animals)
@@ -51,5 +51,36 @@ namespace Wufio.Core.Infastructure
 
             base.OnModelCreating(modelBuilder);
         }
+
+        public void AddUserRole(WufioUser user, string role)
+        {
+            var dbRole = Roles.FirstOrDefault(r => r.Name == role);
+
+            if (dbRole == null)
+            {
+                dbRole = Roles.Add(new IdentityRole { Name = role });
+                SaveChanges();
+            }
+
+            if (!IsUserInRole(user, role))
+            {
+                user.Roles.Add(new IdentityUserRole { RoleId = dbRole.Id });
+            }
+        }
+
+        public bool IsUserInRole(WufioUser user, string role)
+        {
+            var dbRole = Roles.FirstOrDefault(r => r.Name == role);
+
+            if (dbRole == null) return false;
+
+            return user.Roles.Any(r => r.RoleId == dbRole.Id);
+        }
+
+        public static WufioDbContext Create()
+        {
+            return new WufioDbContext();
+        }
     }
 }
+

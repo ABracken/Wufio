@@ -1,0 +1,189 @@
+﻿.spacer5 {
+    height: 5px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer10 {
+    height: 10px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer15 {
+    height: 15px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer20 {
+    height: 20px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer25 {
+    height: 25px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer30 {
+    height: 30px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer35 {
+    height: 35px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer40 {
+    height: 40px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer45 {
+    height: 45px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer50 {
+    height: 50px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer100 {
+    height: 100px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer200 {
+    height: 200px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.spacer250 {
+    height: 250px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.background-navy {
+    background-color:#243743;
+}
+
+.background-teal {
+    background-color:#28B78D;
+}
+
+.background-lightgrey {
+    background-color:#E1EAFA;
+}
+
+.background-grey {
+    background-color:#8A949B;
+}
+
+.background-darkgrey {
+    background-color:#464647;
+}
+
+.color-navy {
+    color:#243743 !important;
+}
+
+.color-teal {
+    color:##28B78D;
+}
+
+.color-light-grey {
+    color:#E1EAFA;
+}
+
+.color-grey {
+    color:#8A949B;
+}
+
+.color-darkgrey {
+    color:#464647;
+}
+
+.log-in-form {
+    margin-top: 250px !important;
+    width:400px !important;
+    padding: 1rem;
+    border-radius: 3px;
+    vertical-align: middle !important;
+    margin: auto;
+    box-shadow: 3px 3px 3px 4px #ccc;
+    position:absolute;
+    a
+}
+
+.button:hover {
+    background-color:#209472 !important;
+}
+
+.button {
+    background-color:#28B78D !important;
+}

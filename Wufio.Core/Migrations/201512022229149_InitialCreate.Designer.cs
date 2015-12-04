@@ -13,7 +13,7 @@ namespace Wufio.Core.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201512012259289_InitialCreate"; }
+            get { return "201512022229149_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

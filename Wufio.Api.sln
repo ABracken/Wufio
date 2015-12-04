@@ -7,6 +7,70 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wufio.Api", "Wufio.Api\Wufi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wufio.Core", "Wufio.Core\Wufio.Core.csproj", "{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Wufio.Primary", "Wufio.Primary\", "{49D2250A-0F2B-4B31-A6D0-73506BCB3DDB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52637"
+		Debug.AspNetCompiler.PhysicalPath = "Wufio.Primary\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52637\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52637"
+		Release.AspNetCompiler.PhysicalPath = "Wufio.Primary\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52637\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52637"
+		SlnRelativePath = "Wufio.Primary\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Wufio.Client", "Wufio.Client\", "{28B1CA29-9C94-4B44-90D4-A40B69E9E7CE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52987"
+		Debug.AspNetCompiler.PhysicalPath = "Wufio.Client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52987\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52987"
+		Release.AspNetCompiler.PhysicalPath = "Wufio.Client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52987\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52987"
+		SlnRelativePath = "Wufio.Client\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Wufio.Volunteer", "Wufio.Volunteer\", "{C75DA35A-E890-4DB7-BDD4-C2125E0E837E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53157"
+		Debug.AspNetCompiler.PhysicalPath = "Wufio.Volunteer\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53157\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53157"
+		Release.AspNetCompiler.PhysicalPath = "Wufio.Volunteer\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53157\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53157"
+		SlnRelativePath = "Wufio.Volunteer\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +85,18 @@ Global
 		{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F04CB42-5748-4AD1-9758-12CBC6BCF71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D2250A-0F2B-4B31-A6D0-73506BCB3DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D2250A-0F2B-4B31-A6D0-73506BCB3DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D2250A-0F2B-4B31-A6D0-73506BCB3DDB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D2250A-0F2B-4B31-A6D0-73506BCB3DDB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{28B1CA29-9C94-4B44-90D4-A40B69E9E7CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B1CA29-9C94-4B44-90D4-A40B69E9E7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B1CA29-9C94-4B44-90D4-A40B69E9E7CE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B1CA29-9C94-4B44-90D4-A40B69E9E7CE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C75DA35A-E890-4DB7-BDD4-C2125E0E837E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75DA35A-E890-4DB7-BDD4-C2125E0E837E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75DA35A-E890-4DB7-BDD4-C2125E0E837E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75DA35A-E890-4DB7-BDD4-C2125E0E837E}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 namespace Wufio.Core.Migrations
 {
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,6 +15,12 @@ namespace Wufio.Core.Migrations
 
         protected override void Seed(Wufio.Core.Infastructure.WufioDbContext context)
         {
+            context.Roles.AddOrUpdate(
+                r => r.Name,
+                new IdentityRole { Name = "Primary" },
+                new IdentityRole { Name = "Volunteer" },
+                new IdentityRole { Name = "AppUser" }
+                );
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

@@ -49,17 +49,22 @@ namespace Wufio.Core
                 ImageUrl = userModel.ImageUrl
             };
 
-            user.Roles.Add(new IdentityUserRole { RoleId = _ctx.Roles.First(r => r.Name == "Primary").Id });
+            _ctx.Rescues.Add(rescue);
+
+            _ctx.AddUserRole(user, "Primary");
 
             var result = await _userManager.CreateAsync(user, userModel.Password);
 
             return result;
         }
 
-        public async Task<IdentityResult> RegisterVolunteerUser(RegisterVolunteerModel userModel)
+        public async Task<IdentityResult> RegisterVolunteerUser(RegisterVolunteerModel userModel, string userId)
         {
+            var loggedInUser = _ctx.Users.FirstOrDefault(u => u.Id == userId);
+
             WufioUser user = new WufioUser
             {
+                RescueId = loggedInUser.RescueId,
                 UserName = userModel.UserName,
                 FirstName = userModel.FirstName,
                 LastName = userModel.LastName,
@@ -67,7 +72,7 @@ namespace Wufio.Core
                 ImageUrl = userModel.ImageUrl
             };
 
-            user.Roles.Add(new IdentityUserRole { RoleId = _ctx.Roles.First(r => r.Name == "Volunteer").Id });
+            _ctx.AddUserRole(user, "Volunteer");
 
             var result = await _userManager.CreateAsync(user, userModel.Password);
 
@@ -81,10 +86,9 @@ namespace Wufio.Core
                 UserName = userModel.UserName,
                 Email = userModel.Email,
                 ImageUrl = userModel.ImageUrl
-
             };
 
-            user.Roles.Add(new IdentityUserRole { RoleId = _ctx.Roles.First(r => r.Name == "AppUser").Id });
+            _ctx.AddUserRole(user, "AppUser");
 
             var result = await _userManager.CreateAsync(user, userModel.Password);
 

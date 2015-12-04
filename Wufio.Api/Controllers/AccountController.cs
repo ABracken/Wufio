@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using Wufio.Core;
+using Wufio.Core.Infastructure;
 using Wufio.Core.Models;
 
 namespace Wufio.Api.Controllers
@@ -74,7 +75,7 @@ namespace Wufio.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            IdentityResult result = await _repo.RegisterVolunteerUser(userModel);
+            IdentityResult result = await _repo.RegisterVolunteerUser(userModel, User.Identity.GetUserId());
 
             IHttpActionResult errorResult = GetErrorResult(result);
 
