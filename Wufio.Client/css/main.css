@@ -148,12 +148,16 @@
     background-color:#464647;
 }
 
+.background-offwhite {
+    background-color:#f2f2f2;
+}
+
 .color-navy {
     color:#243743 !important;
 }
 
 .color-teal {
-    color:##28B78D;
+    color:#28B78D;
 }
 
 .color-light-grey {
@@ -168,8 +172,66 @@
     color:#464647;
 }
 
+.img-size-md {
+    height:90px;
+    width:90px;
+}
+
+.img-size-sm {
+    height:60px;
+    width:60px;
+}
+
+.font-chewy {
+    font-family: 'Chewy';
+}
+
+.font-nunito {
+    font-family:'Nunito';
+}
+
+.font-size-30 {
+    font-size:30px;
+}
+
+.font-size-20 {
+    font-size:20px;
+}
+
+.font-size-50 {
+    font-size:50px;
+}
+
+.font-size-70 {
+    font-size:70px;
+}
+
+.padding-left-10 {
+    padding-left:10px;
+}
+
+.padding-bottom-5 {
+    padding-bottom:5px;
+}
+
+.padding-bottom-10 {
+    padding-bottom:10px;
+}
+
+.padding-right-4 {
+    padding-right:4px;
+}
+
+.margin-top-0 {
+    margin-top:0;
+}
+
+.margin-bottom-0 {
+    margin-bottom:0;
+}
 .log-in-form {
-    margin-top: 250px !important;
+    background-color:white;
+    margin-top: 100px !important;
     width:400px !important;
     padding: 1rem;
     border-radius: 3px;
@@ -177,7 +239,7 @@
     margin: auto;
     box-shadow: 3px 3px 3px 4px #ccc;
     position:absolute;
-    a
+    font-family: 'Nunito';
 }
 
 .button:hover {
@@ -186,4 +248,16 @@
 
 .button {
     background-color:#28B78D !important;
+}
+
+.link:hover {
+    color:#464647;
+}
+
+.like:hover {
+    color:#209472;
+}
+
+.like:active {
+    color:#dd2e44;
 }

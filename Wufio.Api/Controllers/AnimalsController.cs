@@ -17,6 +17,7 @@ using Wufio.Core.Models;
 
 namespace Wufio.Api.Controllers
 {
+    [Authorize]
     public class AnimalsController : ApiController
     {
         private WufioDbContext db = new WufioDbContext();

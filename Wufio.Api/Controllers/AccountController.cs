@@ -53,13 +53,20 @@ namespace Wufio.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            IdentityResult result = await _repo.RegisterRescuePrimaryUser(userModel);
-
-            IHttpActionResult errorResult = GetErrorResult(result);
-
-            if (errorResult != null)
+            try
             {
-                return errorResult;
+                IdentityResult result = await _repo.RegisterRescuePrimaryUser(userModel);
+
+                IHttpActionResult errorResult = GetErrorResult(result);
+
+                if (errorResult != null)
+                {
+                    return errorResult;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
             }
 
             return Ok();

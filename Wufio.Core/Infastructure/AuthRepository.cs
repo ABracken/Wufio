@@ -38,10 +38,10 @@ namespace Wufio.Core
                 Zipcode = userModel.Zipcode,
                 ImageUrl = userModel.RescueImageUrl
             };
-            // then!
 
             WufioUser user = new WufioUser
             {
+                Rescue = rescue,
                 UserName = userModel.UserName,
                 FirstName = userModel.FirstName,
                 LastName = userModel.LastName,
@@ -51,9 +51,11 @@ namespace Wufio.Core
 
             _ctx.Rescues.Add(rescue);
 
+            var result = await _userManager.CreateAsync(user, userModel.Password);
+
             _ctx.AddUserRole(user, "Primary");
 
-            var result = await _userManager.CreateAsync(user, userModel.Password);
+            _ctx.SaveChanges();
 
             return result;
         }
