@@ -1,4 +1,9 @@
-﻿<div class="top-bar">
+﻿<nav class="top-bar">
+    <div class="top-bar-logo top-bar-logo-center">
+        <a ui-sref="app.home.view" class="font-chewy font-size-30 color-navy margin-top-0">
+            <img src="../../img/dog-icon.png" class="img-size-xs padding-bottom-5" />Wuf<i class="fi-paw font-size-15 color-darkgrey"></i>io
+        </a>
+    </div>
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
             <li class="menu-text">Site Title</li>
@@ -15,16 +20,15 @@
         </ul>
     </div>
     <div class="top-bar-right">
-        <ul class="menu">
-            <li><input type="search" placeholder="Search"></li>
-            <li><button type="button" class="button">Search</button></li>
-        </ul>
+       <ul class="dropdown menu right" data-dropdown-menu>
+           <li class="has-dropdown">
+               <a href="#">Right Button Dropdown</a>
+               <ul class="dropdown">
+                   <li><a href="#">First link in dropdown</a></li>
+                   <li class="active"><a href="#">Active link in dropdown</a></li>
+               </ul>
+           </li>
+       </ul>
     </div>
-</div>
-
-<div class="text-center">
-    <h1 class="font-chewy font-size-50 color-navy margin-top-0">
-        <img src="../../img/dog-icon.png" class="img-size-sm padding-bottom-5" />Wuf<i class="fi-paw font-size-20 color-darkgrey"></i>io
-    </h1>
-</div>
+</nav>
 <div ui-view></div>

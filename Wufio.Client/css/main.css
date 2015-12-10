@@ -149,7 +149,7 @@
 }
 
 .background-offwhite {
-    background-color:#f2f2f2;
+    background-color:#f2f2f2 !important;
 }
 
 .color-navy {
@@ -182,12 +182,24 @@
     width:60px;
 }
 
+.img-size-xs {
+    height: 40px;
+    width: 40px;
+}
+
 .font-chewy {
     font-family: 'Chewy';
 }
 
 .font-nunito {
     font-family:'Nunito';
+}
+
+.font-size-15 {
+    font-size: 15px;
+}
+.font-size-10 {
+    font-size: 10px;
 }
 
 .font-size-30 {
@@ -204,6 +216,9 @@
 
 .font-size-70 {
     font-size:70px;
+}
+.padding-0 {
+    padding:0;
 }
 
 .padding-left-10 {
@@ -260,4 +275,18 @@
 
 .like:active {
     color:#dd2e44;
+}
+
+.align-center {
+    align-content:center;
+    text-align:center;
+    align-items:center;
+}
+
+.top-bar-logo {
+    position: absolute;
+}
+.top-bar-logo-center {
+    left: 50%;
+    margin-left: -92px;
 }
