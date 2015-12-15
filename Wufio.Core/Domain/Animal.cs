@@ -12,7 +12,7 @@ namespace Wufio.Core.Domain
         public int AnimalId { get; set; }
         public int AnimalTypeId { get; set; }
         public string WufioUserId { get; set; }
-        public string Age { get; set; }
+        public int AgeId { get; set; }
         public string Gender { get; set; }
         public string Breed { get; set; }
         public string ImageUrl { get; set; }
@@ -27,7 +27,7 @@ namespace Wufio.Core.Domain
             AnimalId = animal.AnimalId;
             AnimalTypeId = animal.AnimalTypeId;
             WufioUserId = animal.WufioUserId;
-            Age = animal.Age;
+            AgeId = animal.AgeId;
             Gender = animal.Gender;
             Breed = animal.Breed;
             ImageUrl = animal.ImageUrl;

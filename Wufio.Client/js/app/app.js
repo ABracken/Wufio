@@ -7,9 +7,8 @@
         .state('register', { url: '/register', templateUrl: '/templates/auth/register.html', controller: 'RegisterController' })
 
         .state('app', { url: '/app', templateUrl: '/templates/app/app.html', authenticate: true })
-
-        .state('app.home', { abstract: true, url: '/home', template: '<ui-view/>', authenticate: true })
-            .state('app.home.view', { url: '/view', templateUrl: '/templates/app/home/home.html', controller: 'HomeController', authenticate: true });
+            .state('app.home', { url: '/home', templateUrl: '/templates/app/home/home.html', controller: 'HomeController', authenticate: true })
+            .state('app.settings', { url: '/settings:id', templateUrl: '/templates/app/settings/settings.html', controller: 'SettingsController', authenticate:true})
 });
 
 angular.module('clientApp').value('apiUrl', 'http://localhost:60414/api/')

@@ -49,6 +49,8 @@ namespace Wufio.Core.Infastructure
                                             .WithRequired(a => a.Volunteer)
                                             .HasForeignKey(a => a.WufioUserId);
 
+            
+
             base.OnModelCreating(modelBuilder);
         }
 

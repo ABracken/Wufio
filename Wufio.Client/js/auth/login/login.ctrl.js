@@ -12,7 +12,7 @@ angular.module('clientApp').controller('LoginController', ['$scope', '$location'
 
         authService.login($scope.loginData).then(function (response) {
 
-            $location.path('/app/home/view');
+            $location.path('/app/home');
 
         },
          function (err) {

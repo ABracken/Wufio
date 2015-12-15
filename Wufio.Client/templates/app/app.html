@@ -1,34 +1,22 @@
-﻿<nav class="top-bar">
-    <div class="top-bar-logo top-bar-logo-center">
-        <a ui-sref="app.home.view" class="font-chewy font-size-30 color-navy margin-top-0">
+﻿<nav class="nav navbar-default">
+    <div class="col-xs-12 ">
+        <a ui-sref="app.home.view" class="font-chewy font-size-40 color-navy margin-top-0 align-center padding-left-40 underline-none">
             <img src="../../img/dog-icon.png" class="img-size-xs padding-bottom-5" />Wuf<i class="fi-paw font-size-15 color-darkgrey"></i>io
         </a>
-    </div>
-    <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Site Title</li>
-            <li class="has-submenu">
-                <a href="#">One</a>
-                <ul class="submenu menu vertical" data-submenu>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
-        </ul>
-    </div>
-    <div class="top-bar-right">
-       <ul class="dropdown menu right" data-dropdown-menu>
-           <li class="has-dropdown">
-               <a href="#">Right Button Dropdown</a>
-               <ul class="dropdown">
-                   <li><a href="#">First link in dropdown</a></li>
-                   <li class="active"><a href="#">Active link in dropdown</a></li>
-               </ul>
-           </li>
-       </ul>
+        <div class="pull-right">
+            <div class="spacer10"></div>
+            <ul class="nav pull-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle hidden-sm hidden-xs" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/settings" class="align-center">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/auth/logout" class="align-center">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-<div ui-view></div>
+
+<div ui-view class="page"></div>

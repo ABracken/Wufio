@@ -129,57 +129,57 @@
 }
 
 .background-navy {
-    background-color:#243743;
+    background-color: #243743 !important;
 }
 
 .background-teal {
-    background-color:#28B78D;
+    background-color: #28B78D;
 }
 
 .background-lightgrey {
-    background-color:#E1EAFA;
+    background-color: #E1EAFA !important;
 }
 
 .background-grey {
-    background-color:#8A949B;
+    background-color: #8A949B;
 }
 
 .background-darkgrey {
-    background-color:#464647;
+    background-color: #464647;
 }
 
 .background-offwhite {
-    background-color:#f2f2f2 !important;
+    background-color: #f2f2f2 !important;
 }
 
 .color-navy {
-    color:#243743 !important;
+    color: #243743 !important;
 }
 
 .color-teal {
-    color:#28B78D;
+    color: #28B78D;
 }
 
 .color-light-grey {
-    color:#E1EAFA;
+    color: #E1EAFA !important;
 }
 
 .color-grey {
-    color:#8A949B;
+    color: #8A949B !important;
 }
 
 .color-darkgrey {
-    color:#464647;
+    color: #464647;
 }
 
 .img-size-md {
-    height:90px;
-    width:90px;
+    height: 90px;
+    width: 90px;
 }
 
 .img-size-sm {
-    height:60px;
-    width:60px;
+    height: 60px;
+    width: 60px;
 }
 
 .img-size-xs {
@@ -192,101 +192,343 @@
 }
 
 .font-nunito {
-    font-family:'Nunito';
+    font-family: 'Nunito';
 }
 
 .font-size-15 {
     font-size: 15px;
 }
+
 .font-size-10 {
     font-size: 10px;
 }
 
 .font-size-30 {
-    font-size:30px;
+    font-size: 30px;
 }
 
 .font-size-20 {
-    font-size:20px;
+    font-size: 20px;
+}
+
+.font-size-40 {
+    font-size: 40px;
 }
 
 .font-size-50 {
-    font-size:50px;
+    font-size: 50px;
 }
 
 .font-size-70 {
-    font-size:70px;
-}
-.padding-0 {
-    padding:0;
+    font-size: 70px;
 }
 
+.padding-0 {
+    padding: 0 !important;
+}
+
+.padding-left-0 {
+    padding-left: 0 !important;
+}
+
+.padding-right-0 {
+    padding-right: 0 !important;
+}
+
+.padding-bottom-0 {
+    padding-bottom: 0 !important;
+}
+
+
 .padding-left-10 {
-    padding-left:10px;
+    padding-left: 10px !important;
+}
+
+.padding-left-40 {
+    padding-left: 44% !important;
+}
+
+.padding-left-50 {
+    padding-left: 50% !important;
 }
 
 .padding-bottom-5 {
-    padding-bottom:5px;
+    padding-bottom: 5px !important;
 }
 
-.padding-bottom-10 {
-    padding-bottom:10px;
+.padding-15 {
+    padding:15px !important;
 }
+
+.padding-top-0 {
+    padding-top:0px !important;
+}
+
+.margin-top-15 {
+    margin-top: 10px !important;
+}
+
 
 .padding-right-4 {
-    padding-right:4px;
+    padding-right: 4px !important;
+}
+
+.padding-right-10 {
+    padding-right: 10px !important;
+}
+
+.margin-0 {
+    margin: 0 !important;
+}
+
+.margin-15 {
+    margin: 15px !important;
 }
 
 .margin-top-0 {
-    margin-top:0;
+    margin-top: 0;
+}
+
+.margin-top-6 {
+    margin-top: 6%;
 }
 
 .margin-bottom-0 {
-    margin-bottom:0;
+    margin-bottom: 0 !important;
 }
+
+body {
+    background-image: url('../img/photo-1427435150519-42d9bcd0aa81 (1).jpg');
+    background-size:cover;
+    background-attachment:fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
 .log-in-form {
-    background-color:white;
+    background-color: white;
     margin-top: 100px !important;
-    width:400px !important;
+    width: 400px !important;
     padding: 1rem;
     border-radius: 3px;
     vertical-align: middle !important;
     margin: auto;
     box-shadow: 3px 3px 3px 4px #ccc;
-    position:absolute;
+    position: absolute;
     font-family: 'Nunito';
 }
 
-.button:hover {
-    background-color:#209472 !important;
-}
 
-.button {
-    background-color:#28B78D !important;
-}
+
 
 .link:hover {
-    color:#464647;
+    color: #464647;
 }
 
 .like:hover {
-    color:#209472;
+    color: #209472;
+    background-position: 0 0;
 }
 
 .like:active {
-    color:#dd2e44;
+    color: #dd2e44;
+}
+
+.active {
+    color: #dd2e44;
+    background-position: 0 0;
 }
 
 .align-center {
-    align-content:center;
-    text-align:center;
-    align-items:center;
+    text-align: center;
 }
 
-.top-bar-logo {
-    position: absolute;
+.navbar-nav {
+    display: inline-block;
+    float: none;
 }
-.top-bar-logo-center {
-    left: 50%;
-    margin-left: -92px;
+
+::selection {
+    background-color: #b5e2e7;
+}
+
+::-moz-selection {
+    background-color: #8ac7d8;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+#logbox {
+    padding: 10px;
+    margin: 50px auto;
+    width: 340px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+
+h1, input {
+    font-family: 'Nunito';
+}
+
+.input {
+    width: 75%;
+    height: 50px;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+}
+
+    .input:focus {
+        outline: none;
+        border-bottom-color: #28B78D !important;
+    }
+
+    .input:hover {
+        border-bottom-color: #dcdcdc;
+    }
+
+    .input:invalid {
+        box-shadow: none;
+    }
+
+
+.inputButton {
+    position: relative !important;
+    width: 85% !important;
+    height: 50px !important;
+    display: block !important;
+    margin: 30px auto 30px !important;
+    color: white !important;
+    background-color: #28B78D !important;
+    border: none !important;
+    -webkit-box-shadow: 0 5px 0 #209472 !important;
+    -moz-box-shadow: 0 5px 0 #209472 !important;
+    box-shadow: 0 5px 0 #209472 !important;
+}
+
+    .inputButton:hover {
+        top: 2px !important;
+        -webkit-box-shadow: 0 3px 0 #209472 !important;
+        -moz-box-shadow: 0 3px 0 #209472 !important;
+        box-shadow: 0 3px 0 #209472 !important;
+    }
+
+    .inputButton:active {
+        top: 5px !important;
+        box-shadow: none !important;
+    }
+
+    .inputButton:focus {
+        outline: none !important;
+    }
+
+.underline-none:hover {
+    text-decoration: none;
+}
+
+
+
+.page-header {
+    margin-left: 15px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.app-top {
+    border-bottom: 1px solid #ccc;
+    
+}
+
+    .app-top::before {
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #f8f8f8;
+        opacity: 0.2;
+    }
+
+.nav-side-left {
+    width: 16%;
+    min-height: 100%;
+    color: #243743;
+    font-family: 'Nunito';
+    /* what cameron did */
+    position: absolute; /* instead of relative */
+    top: 57px; /* comment out to see why I did this */
+    border-right: 1px solid #ccc;
+    background-color: rgba(248, 248, 248, 0.4);
+}
+
+.nav-side-right {
+    width: 16%;
+    min-height: 100%;
+    height: 100%;
+    right: 0;
+    color: #243743;
+    font-family: 'Nunito';
+    position: absolute; /* instead of relative */
+    top: 57px; /* comment out to see why I did th-is */
+    border-left: 1px solid #ccc;
+    background-color: rgba(248, 248, 248, 0.4);
+}
+
+.nav-middle {
+    margin-left: 16%;
+    margin-right: 16%;
+    position: absolute;
+    width: 68%;
+    min-height: 100%;
+    float: left;
+    padding: 12px;
+    background-color: rgba(248, 248, 248, 0.3);
+}
+
+.position-relative {
+    position:relative;
+}
+
+.vertical-align-middle {
+    vertical-align:bottom;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.home-panel {
+    background-color: rgba(36, 55, 67, 0.4) !important;
+    border: none !important;
+}
+
+.panel-img {
+    width: 70%;
+    border-radius: 2px;
+}
+
+.rescue-button {
+    border: none !important;
+}
+
+.search {
+    
+    margin:30px !important;
+}
+
+.fav-img {
+    width:50%;
 }
