@@ -6,7 +6,7 @@
     <div class="margin-top-6 font-nunito">
         <div class="col-xs-3"></div>
         <div class="col-xs-6">
-            <div id="logbox">
+            <div id="logbox" class="logbox-width">
                 <form class="align-center">
                     <h1 class="color-darkgrey">Log in to Wufio</h1>
                     <input  placeholder="User Name" class="input" ng-model="loginData.userName" />
@@ -16,12 +16,11 @@
                     <label for="checkbox" ng-if="!passwordCheckbox">Show password</label>
                     <input type="submit" value="Log in" class="inputButton button" ng-click="login()" />
                     <p class="text-center"><a href="#" class="color-grey link">Forgot your password?</a></p>
-                    <p class="text-center"><a href="#" class="color-grey link font-size-20">Sign Up</a></p>
+                    <p class="text-center"><a ui-sref="register" class="color-grey link font-size-20">Sign Up</a></p>
                 </form>
             </div>
         </div>
-        <div class="col-xs-3"></div>
-        <!--col-md-6-->
+        
 
 
     </div>

@@ -76,6 +76,8 @@ namespace Wufio.Core
 
             _ctx.AddUserRole(user, "Volunteer");
 
+            _ctx.SaveChanges();
+
             var result = await _userManager.CreateAsync(user, userModel.Password);
 
             return result;
@@ -90,9 +92,11 @@ namespace Wufio.Core
                 ImageUrl = userModel.ImageUrl
             };
 
+            var result = await _userManager.CreateAsync(user, userModel.Password);
+
             _ctx.AddUserRole(user, "AppUser");
 
-            var result = await _userManager.CreateAsync(user, userModel.Password);
+            
 
             return result;
         }

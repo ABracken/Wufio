@@ -13,13 +13,14 @@ namespace Wufio.Core.Domain
         public int AnimalTypeId { get; set; }
         public string WufioUserId { get; set; }
         public int AgeId { get; set; }
-        public string Gender { get; set; }
+        public bool Gender { get; set; }
         public string Breed { get; set; }
         public string ImageUrl { get; set; }
         public string Notes { get; set; }
 
         public virtual AnimalType AnimalType { get; set; }
         public virtual WufioUser Volunteer { get; set; }
+        public virtual Age Age { get; set; }
         public virtual ICollection<UserAnimal> UserLikes { get; set; }
 
         public void Update(AnimalModel animal)

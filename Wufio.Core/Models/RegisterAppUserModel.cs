@@ -16,7 +16,7 @@ namespace Wufio.Core.Models
         [Display(Name = "Email address")]
         public string Email { get; set; }
 
-        [Required]
+        
         [Display(Name = "Profile Picture")]
         public string ImageUrl { get; set; }
 

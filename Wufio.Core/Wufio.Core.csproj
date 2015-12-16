@@ -113,6 +113,10 @@
     <Compile Include="Migrations\201512022229149_InitialCreate.Designer.cs">
       <DependentUpon>201512022229149_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512162030517_AddAgeAndGender.cs" />
+    <Compile Include="Migrations\201512162030517_AddAgeAndGender.Designer.cs">
+      <DependentUpon>201512162030517_AddAgeAndGender.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AgeModel.cs" />
     <Compile Include="Models\AnimalModel.cs" />
@@ -132,6 +136,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201512022229149_InitialCreate.resx">
       <DependentUpon>201512022229149_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512162030517_AddAgeAndGender.resx">
+      <DependentUpon>201512162030517_AddAgeAndGender.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

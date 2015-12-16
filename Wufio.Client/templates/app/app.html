@@ -1,17 +1,17 @@
 ﻿<nav class="nav navbar-default">
     <div class="col-xs-12 ">
-        <a ui-sref="app.home.view" class="font-chewy font-size-40 color-navy margin-top-0 align-center padding-left-40 underline-none">
+        <a ui-sref="app.home" class="font-chewy font-size-40 color-navy margin-top-0 align-center padding-left-40 underline-none">
             <img src="../../img/dog-icon.png" class="img-size-xs padding-bottom-5" />Wuf<i class="fi-paw font-size-15 color-darkgrey"></i>io
         </a>
         <div class="pull-right">
             <div class="spacer10"></div>
             <ul class="nav pull-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle hidden-sm hidden-xs" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
+                    <a class="dropdown-toggle hidden-sm hidden-xs" data-toggle="dropdown">Welcome, {{authentication.userName}} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/settings" class="align-center">Settings</a></li>
+                        <li><a ui-sref="app.settings" class="align-center">Settings</a></li>
                         <li class="divider"></li>
-                        <li><a href="/auth/logout" class="align-center">Logout</a></li>
+                        <li><a ng-click="logOut()" ui-sref="login" class="align-center">Logout</a></li>
                     </ul>
                 </li>
             </ul>

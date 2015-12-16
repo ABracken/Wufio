@@ -15,6 +15,7 @@ namespace Wufio.Core.Infastructure
         {
 
         }
+        public IDbSet<Age> Ages { get; set; }
         public IDbSet<Animal> Animals { get; set; }
         public IDbSet<AnimalType> AnimalTypes { get; set; }
         public IDbSet<Rescue> Rescues { get; set; }
@@ -22,6 +23,11 @@ namespace Wufio.Core.Infastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Age>().HasKey(a => a.AgeId);
+            modelBuilder.Entity<Age>().HasMany(a => a.Animals)
+                                      .WithRequired(a => a.Age)
+                                      .HasForeignKey(a => a.AgeId);
+
             modelBuilder.Entity<Animal>().HasKey(a => a.AnimalId);
             modelBuilder.Entity<Animal>().HasMany(a => a.UserLikes)
                                          .WithRequired(ua => ua.Animal)

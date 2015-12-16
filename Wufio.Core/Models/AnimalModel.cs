@@ -12,7 +12,7 @@ namespace Wufio.Core.Models
         public int AnimalTypeId { get; set; }
         public string WufioUserId { get; set; }
         public int AgeId { get; set; }
-        public string Gender { get; set; }
+        public bool Gender { get; set; }
         public string Breed { get; set; }
         public string ImageUrl { get; set; }
         public string Notes { get; set; }

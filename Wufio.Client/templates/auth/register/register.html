@@ -1,1 +1,21 @@
-﻿
+﻿<div>
+    <h1 class="left-align font-chewy font-size-70 color-navy margin-top-0 padding-left-10">
+        <img src="../../../img/dog-icon.png" class="img-size-md padding-bottom-10" />Wuf<i class="fi-paw font-size-20 padding-right-4 color-darkgrey"></i>io
+    </h1>
+</div>
+<div class="margin-top-6 font-nunito">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4">
+        <div id="logbox">
+            <form class="align-center">
+                <h1 class="color-darkgrey">Register for Wufio</h1>
+                <input placeholder="Email" type="email" class="input" ng-model="registration.email" required="required" />
+                <input placeholder="User Name" class="input" ng-model="registration.userName" required="required" />
+                <input placeholder="Password" type="password" class="input" ng-model="registration.password" required="required" />
+                <input placeholder="Confirm Password" type="password" class="input" ng-model="registration.confirmPassword" required="required" />
+                <input type="submit" value="Register" class="inputButton button" ng-click="register()" />
+
+            </form>
+        </div>
+    </div>
+</div>

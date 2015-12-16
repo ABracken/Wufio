@@ -31,16 +31,24 @@ namespace Wufio.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            IdentityResult result = await _repo.RegisterAppUser(userModel);
-
-            IHttpActionResult errorResult = GetErrorResult(result);
-
-            if (errorResult != null)
+            try
             {
-                return errorResult;
-            }
+                IdentityResult result = await _repo.RegisterAppUser(userModel);
 
-            return Ok();
+                IHttpActionResult errorResult = GetErrorResult(result);
+
+                if (errorResult != null)
+                {
+                    return errorResult;
+                }
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
 
         // POST api/Account/RegisterRescuePrimaryUser
@@ -82,16 +90,25 @@ namespace Wufio.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            IdentityResult result = await _repo.RegisterVolunteerUser(userModel, User.Identity.GetUserId());
-
-            IHttpActionResult errorResult = GetErrorResult(result);
-
-            if (errorResult != null)
+            try
             {
-                return errorResult;
-            }
+                IdentityResult result = await _repo.RegisterVolunteerUser(userModel, User.Identity.GetUserId());
 
-            return Ok();
+                IHttpActionResult errorResult = GetErrorResult(result);
+
+                if (errorResult != null)
+                {
+                    return errorResult;
+                }
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+            
         }
 
         protected override void Dispose(bool disposing)

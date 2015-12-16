@@ -10,5 +10,7 @@ namespace Wufio.Core.Domain
     {
         public int AgeId { get; set; }
         public string AgeRange { get; set; }
+
+        public virtual ICollection<Animal> Animals { get; set; }
     }
 }

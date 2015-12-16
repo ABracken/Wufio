@@ -9,11 +9,11 @@ angular.module('clientApp').factory('authService', ['$http', '$q', 'localStorage
         userName : ""
     };
  
-    var _saveRegistration = function (registration) {
+    var _registerAppUser = function (registration) {
  
         _logOut();
  
-        return $http.post(apiUrl + 'account/register', registration).then(function (response) {
+        return $http.post(apiUrl + 'account/registerappuser', registration).then(function (response) {
             return response;
         });
  
@@ -63,7 +63,7 @@ angular.module('clientApp').factory('authService', ['$http', '$q', 'localStorage
  
     }
  
-    authServiceFactory.saveRegistration = _saveRegistration;
+    authServiceFactory.registerAppUser = _registerAppUser;
     authServiceFactory.login = _login;
     authServiceFactory.logOut = _logOut;
     authServiceFactory.fillAuthData = _fillAuthData;
