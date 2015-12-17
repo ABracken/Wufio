@@ -117,6 +117,10 @@
     <Compile Include="Migrations\201512162030517_AddAgeAndGender.Designer.cs">
       <DependentUpon>201512162030517_AddAgeAndGender.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512172221591_agecontroller.cs" />
+    <Compile Include="Migrations\201512172221591_agecontroller.Designer.cs">
+      <DependentUpon>201512172221591_agecontroller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AgeModel.cs" />
     <Compile Include="Models\AnimalModel.cs" />
@@ -139,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512162030517_AddAgeAndGender.resx">
       <DependentUpon>201512162030517_AddAgeAndGender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512172221591_agecontroller.resx">
+      <DependentUpon>201512172221591_agecontroller.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
